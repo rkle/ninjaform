@@ -1,0 +1,78 @@
+body{
+	margin:0;
+	font-family:calibri, sans-serif;
+	background-color: #333;
+	overflow:hidden;
+	}
+
+h1{
+	font-size: 48px;
+	margin:10px 0;
+}
+p{
+	margin-bottom:40px;
+}
+#pop-up{
+	position: relative;
+	top:200px;
+	width:500px;
+	margin:auto;
+	text-align:center;
+}
+#pop-up .container{
+	background-color: #f0e4d4;
+	padding:30px;
+	position: absolute;
+	top:50px;
+	width:100%;
+	box-sizing: border-box;
+}
+#pop-up input{
+	padding: 10px;
+	border:1px solid #333;
+	border-radius:10px 0 0 10px;
+	font-size:18px;
+}
+#pop-up button{
+	padding:10px;
+	font-size:18px;
+	border:1px solid #333;
+	background-color:#333;
+	color:white;
+	font-size: 18px;
+	cursor: pointer;
+}
+
+#pop-up .cross{
+	position: absolute;
+	top:10px;  
+	left:10px;
+	width:22px;
+	height: 22px;
+	border-radius:50%;
+	background-color:#333;
+	color: white;
+	text-align: center;
+	cursor:pointer;
+}
+
+#pop-up{
+	top:-500px;
+	transform-origin: 10px 10px;
+	animation: drop .5s ease forwards,
+				swing 2s 2s ease forwards;
+}
+
+@keyframes drop{
+	0%{opacity:0;}
+	70%{transform: translateY(700px);}
+	100%{transform: translateY(650px);opacity: 1}
+}
+
+
+@keyframes swing{
+	0%{transform: translateY(650px) rotateZ(0deg)}
+	40%{transform: translateY(650px) rotateZ(90deg);}
+	70%{transform: translateY(650px) rotateZ(70deg);}
+	100%{transform: translateY(650px) rotateZ(75deg)}
+}
